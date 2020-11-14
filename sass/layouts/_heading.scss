@@ -1,5 +1,10 @@
 /* ЧЕМ МЫ ЗАНИМАЕМСЯ */
-
+.section.heading {
+	display: none;
+	@media screen and (min-width: 1199px) {
+		display: block;
+	}
+}
 .position.heading {
 	margin: 0;
 	position: relative;
@@ -32,6 +37,7 @@
 	// transform: translate(-50%);
 }
 .list.heading {
+	display: flex;
 	margin-left: -30px;
 	margin-bottom: 0;
 }

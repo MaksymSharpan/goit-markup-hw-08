@@ -471,24 +471,60 @@ b {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1200px) {
+  .list.features {
+    flex-wrap: nowrap;
+  }
+}
+
+.item-features {
+  max-width: 1200px;
+}
+
+@media screen and (max-width: 768px) {
+  .item-features h3 {
+    text-align: center;
+  }
   .item-features:not(:last-child) {
     margin-bottom: 30px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .item-features {
-    margin-bottom: 30px;
     width: calc((100% - 30px) / 2);
   }
   .item-features:nth-child(2n - 1) {
     margin-right: 30px;
   }
+  .item-features:nth-last-child(n + 2) {
+    margin-bottom: 0px;
+  }
+  .item-features:nth-last-child(n + 3) {
+    margin-bottom: 30px;
+  }
 }
 
-.section.features {
-  padding-bottom: 0px;
+@media screen and (min-width: 1200px) {
+  .item-features {
+    width: calc((100% - 30px * 3) / 4);
+  }
+  .item-features:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section.features {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .section.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 /* ПСЕВДОЭЛЕМЕНТЫ */
