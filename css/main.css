@@ -225,23 +225,56 @@ img {
   background-color: #2f303a;
 }
 
+@media screen and (max-width: 1199px) {
+  .footer-page {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 .logo.down {
   color: #ffffff;
 }
 
-.container.footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  align-items: baseline;
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
 
-.list.social.footer {
-  justify-content: left;
-  margin-top: 0;
+@media screen and (min-width: 1200px) {
+  .container.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    align-items: baseline;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container.footer {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .list.social.footer {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .list.social.footer {
+    justify-content: left;
+    margin-top: 0;
+  }
 }
 
 .link-social.footer {
@@ -265,13 +298,51 @@ b {
   margin-bottom: 20px;
 }
 
-/* FORM FOOTER */
-.footer-form {
-  display: flex;
+@media screen and (max-width: 767px) {
+  .footer-box b {
+    text-align: center;
+  }
 }
 
-.footer-box {
-  width: calc((100% - 2 * 30px) / 2);
+/* FORM FOOTER */
+@media screen and (max-width: 767px) {
+  .footer-form {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-form {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-box:not(:last-child) {
+    margin-bottom: 60px;
+    width: calc((100% - 30px) / 2);
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-box {
+    width: calc((100% - 2 * 30px) / 2);
+    margin-bottom: 0;
+  }
 }
 
 .mail-footer {
@@ -286,6 +357,20 @@ b {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+
+@media screen and (max-width: 767px) {
+  .mail-footer {
+    margin-bottom: 20px;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .mail-footer {
+    width: 450px;
+  }
 }
 
 .button-footer {
@@ -537,7 +622,6 @@ b {
 }
 
 .list.team {
-  margin-right: -30px;
   text-align: center;
 }
 
@@ -560,6 +644,9 @@ b {
 }
 
 @media screen and (max-width: 767px) {
+  .item-team {
+    width: 450px;
+  }
   .item-team:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -621,20 +708,37 @@ b {
   fill: #fff;
 }
 
-.list.clients {
-  align-items: center;
-  justify-content: center;
+@media screen and (max-width: 1199px) {
+  .section.clients {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
-.list.social.footer {
-  justify-content: start;
+@media screen and (max-width: 1199px) {
+  .container.clients h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.list.clients {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1200px) {
+  .list.clients {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .link-clients {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   height: 90px;
   fill: #afb1b8;
   border: 1px solid #afb1b8;
@@ -644,8 +748,22 @@ b {
 }
 
 .item-clients {
-  margin-right: 30px;
-  width: calc((100% - 5 * 30px) / 6);
+  margin: 15px;
+  width: calc((100% - 60px) / 2);
+}
+
+.item-clients:nth-last-child(-n + 2) {
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 1200px) {
+  .item-clients {
+    margin-bottom: 0;
+    width: calc((100% - 5 * 30px) / 6);
+  }
+  .item-clients:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .link-clients:hover,
