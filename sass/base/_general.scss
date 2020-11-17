@@ -8,7 +8,10 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 
-	padding-top: 80px;
+	// padding-top: 80px;
+}
+body.modal-open {
+	overflow: hidden;
 }
 h1,
 h2,
@@ -22,8 +25,6 @@ p {
 }
 img {
 	display: block;
-	max-width: 100%;
-	height: auto;
 }
 .list {
 	list-style: none;
@@ -31,16 +32,23 @@ img {
 	padding: 0;
 }
 .section {
-	padding-top: 94px;
-	padding-bottom: 94px;
+	@media screen and (max-width: 1199px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	@media screen and (min-width: 1200px) {
+		padding-top: 94px;
+		padding-bottom: 94px;
+	}
 }
 .container {
-	max-width: 1200px;
-	min-width: 320px;
 	padding-left: 15px;
 	padding-right: 15px;
 	margin-left: auto;
 	margin-right: auto;
+	@media screen and (min-width: 1200px) {
+		width: 1200px;
+	}
 }
 .heading {
 	font-weight: 700;
@@ -58,8 +66,14 @@ img {
 .list.content,
 .list.clients,
 .list.address.up {
-	// display: flex;
-	align-items: center;
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	@media screen and(min-width: 1200px) {
+		flex-wrap: nowrap;
+	}
 }
 .main {
 	color: #fff;

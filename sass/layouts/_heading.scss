@@ -1,10 +1,10 @@
 /* ЧЕМ МЫ ЗАНИМАЕМСЯ */
 .section.heading {
-	display: none;
-	@media screen and (min-width: 1199px) {
-		display: block;
+	@media screen and(max-width: 1199px) {
+		display: none;
 	}
 }
+
 .position.heading {
 	margin: 0;
 	position: relative;
@@ -37,13 +37,15 @@
 	// transform: translate(-50%);
 }
 .list.heading {
-	display: flex;
-	margin-left: -30px;
+	// margin-left: -30px;
 	margin-bottom: 0;
 }
 
 .item-heading {
-	width: 370px;
-	margin-left: 30px;
+	// width: 370px;
+	// margin-left: 30px;
 	flex-basis: calc(100% / 3 - 30px);
+	&:not(:last-child) {
+		margin-right: 30px;
+	}
 }

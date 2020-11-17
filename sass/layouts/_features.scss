@@ -6,6 +6,13 @@
 	text-transform: uppercase;
 
 	margin-bottom: 10px;
+
+	@media screen and (max-width: 767px) {
+		text-align: center;
+	}
+	@media screen and (min-width: 768px) {
+		text-align: left;
+	}
 }
 .features-text {
 	font-weight: 400;
@@ -18,42 +25,35 @@
 	margin-top: 0;
 	margin-bottom: 0;
 }
-.list.features {
-	@media screen and(min-width: 768px) {
-		display: flex;
-		flex-wrap: wrap;
-	}
 
-	@media screen and(min-width: 1200px) {
-		flex-wrap: nowrap;
+.list.features {
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		align-items: flex-start;
+	}
+	@media screen and (max-width: 1199px) {
+		justify-content: center;
 	}
 }
+
 .item-features {
-	@media screen and (max-width: 768px) {
-		h3 {
-			text-align: center;
-		}
+	@media screen and(max-width: 767px) {
 		&:not(:last-child) {
 			margin-bottom: 30px;
 		}
 	}
-	max-width: 1200px;
 	@media screen and (min-width: 768px) and (max-width: 1199px) {
-		width: calc((100% - 30px) / 2);
-
-		&:nth-child(2n - 1) {
+		width: calc(100% / 2 - 30px);
+		&:nth-last-child(2n) {
 			margin-right: 30px;
 		}
-		&:nth-last-child(n + 2) {
-			margin-bottom: 0px;
-		}
-		&:nth-last-child(n + 3) {
+		&:nth-child(-n + 2) {
 			margin-bottom: 30px;
 		}
 	}
-	@media screen and(min-width: 1200px) {
-		width: calc((100% - 30px * 3) / 4);
 
+	@media screen and (min-width: 1200px) {
+		// margin-left: 30px;
+		width: calc(100% / 3 - 30px);
 		&:not(:last-child) {
 			margin-right: 30px;
 		}
@@ -61,13 +61,10 @@
 }
 .section.features {
 	@media screen and (min-width: 1200px) {
-		padding-bottom: 0;
-	}
-	@media screen and (max-width: 1199px) {
-		padding-top: 60px;
-		padding-bottom: 60px;
+		padding-bottom: 0px;
 	}
 }
+
 /* ПСЕВДОЭЛЕМЕНТЫ */
 
 .item-features::before {

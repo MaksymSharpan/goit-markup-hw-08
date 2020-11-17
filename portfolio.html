@@ -25,30 +25,48 @@
 						<span class="web">Web</span>
 						Studio
 					</a>
-					<ul class="list nav">
-						<li class="link"><a href="./index.html" class="link-page">Студия</a></li>
-						<li class="link"><a href="./portfolio.html" class="link-page current">Портфолио</a></li>
-						<li class="link"><a href="#footer" class="link-page">Контакты</a></li>
-					</ul>
+					<button
+						type="button"
+						class="menu-button is-open"
+						aria-expanded="false"
+						aria-controls="menu-container"
+						data-menu-button
+					>
+						<svg width="40px" height="40px" aria-label="Переключатель меню">
+							<use class="icon-menu" href="./images/icon-2/sprite-form.svg#icon-menu_24px"></use>
+							<use class="icon-cross" href="./images/icon-2/sprite-form.svg#icon-close_24px"></use>
+						</svg>
+					</button>
+
+					<div class="menu-container" id="menu-container" data-menu>
+						<!-- <div class="flex-menu"> -->
+						<ul class="list nav">
+							<li class="link"><a href="./index.html" class="link-page">Студия</a></li>
+							<li class="link"><a href="./portfolio.html" class="link-page current">Портфолио</a></li>
+							<li class="link"><a href="#footer" class="link-page">Контакты</a></li>
+						</ul>
+
+						<ul class="list address up">
+							<li class="link">
+								<a href="mailto:info@devstudio.com" class="link-contacts up">
+									<svg class="icon-address" width="16px" height="12px">
+										<use href="./images/icon/sprite.svg#icon-mail"></use>
+									</svg>
+									info@devstudio.com
+								</a>
+							</li>
+							<li class="link">
+								<a href="tel:380961111111" class="link-contacts up">
+									<svg class="icon-address" width="10px" height="16px">
+										<use href="./images/icon/sprite.svg#icon-smartphone"></use>
+									</svg>
+									+38 096 111 11 11
+								</a>
+							</li>
+						</ul>
+						<!-- </div> -->
+					</div>
 				</nav>
-				<ul class="list address up">
-					<li class="link">
-						<a href="mailto:info@devstudio.com" class="link-contacts up">
-							<svg class="icon-address" width="16px" height="12px">
-								<use href="./images/icon/sprite.svg#icon-mail"></use>
-							</svg>
-							info@devstudio.com
-						</a>
-					</li>
-					<li class="link">
-						<a href="tel:380961111111" class="link-contacts up">
-							<svg class="icon-address" width="10px" height="16px">
-								<use href="./images/icon/sprite.svg#icon-smartphone"></use>
-							</svg>
-							+38 096 111 11 11
-						</a>
-					</li>
-				</ul>
 			</div>
 		</header>
 
@@ -69,7 +87,7 @@
 						<li class="item-content">
 							<a href="" class="link-content">
 								<div class="position portfolio">
-									<img src="./images/portfolio1.jpg" alt="Технокряк" width="370" />
+									<img src="./images/portfolio1.jpg" alt="Технокряк" />
 									<div class="position-container">
 										<p class="position-text">
 											Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga officiis sunt dolorem, harum saepe
@@ -103,14 +121,14 @@
 									</div>
 								</div>
 								<div class="text-content">
-									<h2 class="company">Постер New Orlean vs Golden Star</h2>
+									<h2 class="company">Постер New Orlean vs Golden</h2>
 									<p class="categories">Дизайн</p>
 								</div>
 							</a>
 						</li>
 						<li class="item-content">
 							<a href="" class="link-content">
-								<div><img src="./images/portfolio3.jpg" alt="Ресторан Seafood" width="370" /></div>
+								<div class="position portfolio"><img src="./images/portfolio3.jpg" alt="Ресторан Seafood" /></div>
 								<div class="text-content">
 									<h2 class="company">Ресторан Seafood</h2>
 									<p class="categories">Приложение</p>
@@ -119,7 +137,7 @@
 						</li>
 						<li class="item-content">
 							<a href="" class="link-content">
-								<div><img src="./images/portfolio4.jpg" alt="Проект Prime" width="370" /></div>
+								<div class="position portfolio"><img src="./images/portfolio4.jpg" alt="Проект Prime" /></div>
 								<div class="text-content">
 									<h2 class="company">Проект Prime</h2>
 									<p class="categories">Маркетинг</p>
@@ -128,7 +146,9 @@
 						</li>
 						<li class="item-content">
 							<a href="" class="link-content">
-								<div><img src="./images/portfolio5.jpg" alt="Проект Boxes" width="370" /></div>
+								<div class="position portfolio">
+									<img src="./images/portfolio5.jpg" alt="Проект Boxes" width="370" />
+								</div>
 								<div class="text-content">
 									<h2 class="company">Проект Boxes</h2>
 									<p class="categories">Приложение</p>
@@ -137,7 +157,9 @@
 						</li>
 						<li class="item-content">
 							<a href="" class="link-content">
-								<div><img src="./images/portfolio6.jpg" alt="Inspiration has no Borders" width="370" /></div>
+								<div class="position portfolio">
+									<img src="./images/portfolio6.jpg" alt="Inspiration has no Borders" width="370" />
+								</div>
 								<div class="text-content">
 									<h2 class="company">Inspiration has no Borders</h2>
 									<p class="categories">Веб-сайт</p>
@@ -146,7 +168,9 @@
 						</li>
 						<li class="item-content">
 							<a href="" class="link-content">
-								<div><img src="./images/portfolio7.jpg" alt="Издание Limited Edition" width="370" /></div>
+								<div class="position portfolio">
+									<img src="./images/portfolio7.jpg" alt="Издание Limited Edition" width="370" />
+								</div>
 								<div class="text-content">
 									<h2 class="company">Издание Limited Edition</h2>
 									<p class="categories">Дизайн</p>
@@ -155,7 +179,7 @@
 						</li>
 						<li class="item-content">
 							<a href="" class="link-content">
-								<div><img src="./images/portfolio8.jpg" alt="Проект LAB" width="370" /></div>
+								<div class="position portfolio"><img src="./images/portfolio8.jpg" alt="Проект LAB" width="370" /></div>
 								<div class="text-content">
 									<h2 class="company">Проект LAB</h2>
 									<p class="categories">Маркетинг</p>
@@ -164,7 +188,9 @@
 						</li>
 						<li class="item-content">
 							<a href="" class="link-content">
-								<div><img src="./images/portfolio9.jpg" alt="Growing Business" width="370" /></div>
+								<div class="position portfolio">
+									<img src="./images/portfolio9.jpg" alt="Growing Business" width="370" />
+								</div>
 								<div class="text-content">
 									<h2 class="company">Growing Business</h2>
 									<p class="categories">Приложение</p>
@@ -188,7 +214,7 @@
 						</a>
 					</div>
 					<address>
-						<ul class="list">
+						<ul class="list footer">
 							<li class="link-down">
 								<a
 									href="https://goo.gl/maps/tncFJS4bmtnmpcFF8"
@@ -247,7 +273,8 @@
 						<input class="mail-footer" type="email" name="mail" placeholder="E-mail" />
 
 						<button class="button-footer" type="submit">
-							Подписаться<svg class="icon-footer" width="24px" height="24px">
+							Подписаться
+							<svg class="icon-footer" width="24px" height="24px">
 								<use href="./images/icon-2/sprite.svg#icon-send"></use>
 							</svg>
 						</button>
@@ -256,5 +283,6 @@
 				<!-- </div> -->
 			</div>
 		</footer>
+		<script src="./menu.js"></script>
 	</body>
 </html>
